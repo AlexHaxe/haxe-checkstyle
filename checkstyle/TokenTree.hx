@@ -91,7 +91,8 @@ class TokenTree extends Token {
 
 	public function printTokenTree(prefix:String = ""):String {
 		var buf:StringBuf = new StringBuf();
-		if (tok != null) buf.add('$prefix${tok}\t\t\t\t${getPos()}');
+		//if (tok != null) buf.add('$prefix${tok}\t\t\t\t${getPos()}');
+		if (tok != null) buf.add('$prefix${tok}\t\t\t\t${pos}');
 		if (childs == null) return buf.toString();
 		for (child in childs) {
 			buf.add('\n$prefix${child.printTokenTree(prefix + "  ")}');
