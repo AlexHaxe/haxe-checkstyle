@@ -1,0 +1,13 @@
+-cp resources
+-cp checkstyle
+-lib hxparse:4.0.0
+-lib haxeparser:1.0.0
+-lib compiletime:2.5.1
+-lib hxargs:3.0.0
+
+-debug
+-main TokenTest
+-D absolute-path
+-D checkstyle
+-neko tokentest.n
+-cmd neko tokentest
